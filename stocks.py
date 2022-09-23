@@ -17,7 +17,7 @@ def stock_purchases():
 
     # 1.3 TODO: Uncomment the line below to ask the client which stock they're interested in.
     # NOTE: Take a look at how this input string prints out
-    stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ").lower()
+    stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ")
     
     # Now that you have all of the client info, you can check how much they can purchase of the stock
     # they're interested in.
@@ -26,20 +26,20 @@ def stock_purchases():
     # and save it in a variable
     
     share_amt = 0 
-    if stock_name == 'amazon':
+    if stock_name == 'Amazon':
         share_amt =  (amount / amazon) 
         current_price = amazon
     
-    elif stock_name == 'apple':
+    elif stock_name == 'Apple':
         share_amt = (amount/ apple)
         current_price = apple
-    elif stock_name == 'fb':
+    elif stock_name == 'Facebook':
         share_amt = (amount/fb)
         current_price = fb
-    elif stock_name == 'google':
+    elif stock_name == 'Google':
         share_amt = (amount/google)
         current_price = google
-    elif stock_name == 'msft':
+    elif stock_name == 'Microsoft':
         share_amt = (amount/msft)
         current_price = msft
     
@@ -51,6 +51,6 @@ def stock_purchases():
     # 1.5 TODO: Once you've calculated the number of stocks that can be purchased,
     # Use an f-string to print the result for the client, ala:
     # Alex has $5000 to invest and can buy 50 shares of Apple at the current price of $100.
-    print(f'{user_name} has ${amount} to invest and can buy {int(share_amt)} shares of {stock_name.capitalize()} at the current price of ${current_price}.')
+    print(f'{user_name} has ${amount} to invest and can buy {int(share_amt)} shares of {stock_name} at the current price of ${current_price}.')
 
-stock_purchases()
+#stock_purchases()
