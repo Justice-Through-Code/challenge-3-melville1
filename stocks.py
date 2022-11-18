@@ -25,7 +25,7 @@ def stock_purchases():
     # 1.4 TODO: Use `if/elif/else` conditional logic to determine how much stock the client can buy,
     # and save it in a variable
     
-    share_amt = 0 
+     
     if stock_name == 'Amazon':
         share_amt =  (amount / amazon) 
         current_price = amazon
@@ -54,3 +54,23 @@ def stock_purchases():
     print(f'{user_name} has ${amount} to invest and can buy {int(share_amt)} shares of {stock_name} at the current price of ${current_price}.')
 
 #stock_purchases()
+def buy_stocks():
+
+    stocks = {
+        'amazon' : '3000',
+        'apple' : '100',
+        'fb' : '250',
+        'google' : '1400',
+        'msft' : '200',
+    }
+
+    client_name = input('What is your name? ')
+    to_invest = int(input(f'How much would you like to invest? $'))
+    stock_name = input("\nWhich stock are you interested in? Enter the full name:\nAmazon\nApple\nFacebook\nGoogle\nMicrosoft\nStock Name: ")
+
+    for stock in stocks:
+        if stock == stock_name:
+            num_stock = int(to_invest / stocks[stock])
+            print(f'{client_name} has ${to_invest} to invest and can buy {num_stock} shares of {stock_name} at the current price of ${stocks[stock]}.')
+
+buy_stocks()
